@@ -32,9 +32,9 @@ dob = Label(root, text="Date of Birth", bg='#283618', fg='white',
 dob.place(x=40, y=170, width=200, height=30)
 
 # given date heading label
-dob = Label(root, text="Given Date", bg='#283618', fg='white',
-            font=('Helvetica', 15, 'bold'))
-dob.place(x=400, y=170, width=160, height=30)
+given_date = Label(root, text="Given Date", bg='#283618', fg='white',
+                   font=('Helvetica', 15, 'bold'))
+given_date.place(x=400, y=170, width=160, height=30)
 
 # button to display today's date
 today = Button(root, text="Today", bg='#283618', fg='#f1faee',
@@ -42,19 +42,32 @@ today = Button(root, text="Today", bg='#283618', fg='#f1faee',
 today.place(x=570, y=170, width=90, height=30)
 
 # day label
-day = Label(root, text="Day", bg='#4a4e69', fg='black',
+day = Label(root, text="Day:", bg='#4a4e69', fg='black',
             font=('lucida ', 15))
 day.place(x=40, y=210, )
 
 # month label
-day = Label(root, text="Month", bg='#4a4e69', fg='black',
+day = Label(root, text="Month:", bg='#4a4e69', fg='black',
             font=('lucida ', 15))
 day.place(x=40, y=240, )
 
 # Year label
-day = Label(root, text="Year", bg='#4a4e69', fg='black',
+day = Label(root, text="Year:", bg='#4a4e69', fg='black',
             font=('lucida ', 15))
 day.place(x=40, y=270)
+
+# Date of birth Entry Field
+day_field = Entry(root, font=('arial', 15))
+day_field.place(x=120, y=210, height=25, width=120)
+
+month_field = Entry(root, font=('arial', 15))
+month_field.place(x=120, y=240, height=25, width=120)
+
+year_field = Entry(root, font=('arial', 15))
+year_field.place(x=120, y=270, height=25, width=120)
+
+# Given date Entry Field
+
 
 # start the GUI
 root.mainloop()

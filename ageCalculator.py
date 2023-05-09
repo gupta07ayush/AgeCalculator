@@ -131,6 +131,19 @@ days = Label(root, text="Days", bg='#0c1821', fg='white',
              font=('Helvetica', 14,))
 days.place(x=400, y=420, width=80, height=35)
 
+# Result values of years, months and days
+years_value = Label(root, text="", bg='#4a4e69', fg='white',
+                    font=('Helvetica', 35, 'bold'))
+years_value.place(x=200, y=470, width=80, height=35)
+
+months_value = Label(root, text="", bg='#4a4e69', fg='white',
+                     font=('Helvetica', 35, 'bold'))
+months_value.place(x=300, y=470, width=80, height=35)
+
+days_value = Label(root, text="", bg='#4a4e69', fg='white',
+                   font=('Helvetica', 35, 'bold'))
+days_value.place(x=400, y=470, width=80, height=35)
+
 
 # start the GUI
 root.mainloop()

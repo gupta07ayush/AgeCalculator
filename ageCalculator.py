@@ -26,5 +26,11 @@ frame = Label(root, font=(
     'Times new roman', 50, 'bold'), bg="#005f73")
 frame.place(x=20, y=150, width=660, height=200)
 
+# Date of birth heading label
+dob = Label(root, text="Date of Birth", bg='#283618', fg='white',
+            font=('Helvetica', 15, 'bold'))
+dob.place(x=40, y=170, width=200, height=30)
+
+
 # start the GUI
 root.mainloop()

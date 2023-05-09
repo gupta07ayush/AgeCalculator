@@ -21,6 +21,10 @@ heading = Label(root, text='Age Calculator', font=(
     'Times new roman', 50, 'bold'), bg="#3a5a40")
 heading.place(x=20, y=20, width=660, height=100)
 
+# frame which contains all user entry boxes
+frame = Label(root, font=(
+    'Times new roman', 50, 'bold'), bg="#005f73")
+frame.place(x=20, y=150, width=660, height=200)
 
 # start the GUI
 root.mainloop()

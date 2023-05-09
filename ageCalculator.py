@@ -14,7 +14,7 @@ root = Tk()
 root.title('Age Calculator')
 
 # set the size of root window
-root.geometry("700x600")
+root.geometry("700x580")
 
 # set the background color of whole GUI window root
 root.config(bg="#344e41")
@@ -111,12 +111,25 @@ given_year_entry.place(x=540, y=270, height=25, width=120)
 # frame2 which contains results
 frame2 = Label(root, font=(
     'Times new roman', 50, 'bold'), bg="#4a4e69")
-frame2.place(x=20, y=350, width=660, height=170)
+frame2.place(x=20, y=350, width=660, height=190)
 
 # Resultant age button
 resultant_age = Button(root, text="Resultant Age",
                        font=('arial', 15, 'bold'), bg='#22223b', fg='white')
 resultant_age.place(x=40, y=360, width=620)
+
+# Result Labels of years, months and days
+years = Label(root, text="Years", bg='#0c1821', fg='white',
+              font=('Helvetica', 14,))
+years.place(x=200, y=420, width=80, height=35)
+
+months = Label(root, text="Months", bg='#0c1821', fg='white',
+               font=('Helvetica', 14,))
+months.place(x=300, y=420, width=80, height=35)
+
+days = Label(root, text="Days", bg='#0c1821', fg='white',
+             font=('Helvetica', 14,))
+days.place(x=400, y=420, width=80, height=35)
 
 
 # start the GUI

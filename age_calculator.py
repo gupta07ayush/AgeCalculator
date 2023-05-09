@@ -1,11 +1,12 @@
 # Import some functions from tkinter module
 from tkinter import Entry, Button, Tk, Label, END
-
 # import messagebox  class from tkinter
 from tkinter import messagebox
-
 # import datetime module
-from datetime import datetime
+from datetime import datetime, date
+# relativedelta of dateutil module gives difference between two dates
+from dateutil.relativedelta import relativedelta
+
 
 # create a object of TK class to create a GUI window
 root = Tk()
@@ -33,10 +34,7 @@ def today():
     given_year_entry.insert(END, year)
 
 
-def resultant():
-    pass
-
-
+# Function for clearing the contents of all text entry boxes
 def clearAll():
     # delete the value of date of birth entry
     day_entry.delete(0, END)
@@ -47,6 +45,28 @@ def clearAll():
     given_day_entry.delete(0, END)
     given_month_entry.delete(0, END)
     given_year_entry.delete(0, END)
+
+    # delete the value of results data
+    days_value.destroy()
+    months_value.destroy()
+    years_value.destroy()
+
+
+# function for checking error
+def checkError():
+    # if any of the entry field is empty then
+    # show an error message and clear all the entries
+    if (day_entry.get() == '' or month_entry.get() == ''
+        or year_entry.get() == '' or given_day_entry.get() == ''
+            or given_month_entry.get() == '' or given_year_entry.get() == ''):
+
+        # show the error message
+        messagebox.showerror("Fill All input field")
+
+        # calling the clearAll function
+        clearAll()
+
+        return -1
 
 
 # Heading Age calculator

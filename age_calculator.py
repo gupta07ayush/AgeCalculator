@@ -46,27 +46,80 @@ def clearAll():
     given_month_entry.delete(0, END)
     given_year_entry.delete(0, END)
 
-    # delete the value of results data
-    days_value.destroy()
-    months_value.destroy()
-    years_value.destroy()
+    # # delete the value of results data
+    days_value.config(text='')
+    months_value.config(text='')
+    years_value.config(text='')
 
 
 # function for checking error
 def checkError():
     # if any of the entry field is empty then
     # show an error message and clear all the entries
-    if (day_entry.get() == '' or month_entry.get() == ''
-        or year_entry.get() == '' or given_day_entry.get() == ''
-            or given_month_entry.get() == '' or given_year_entry.get() == ''):
+    d = day_entry.get()
+    m = month_entry.get()
+    y = year_entry.get()
+    gd = given_day_entry.get()
+    gm = given_month_entry.get()
+    gy = given_year_entry.get()
+    if (d == '' or m == '' or y == ''
+            or gd == '' or gm == '' or gy == ''):
 
         # show the error message
-        messagebox.showerror("Fill All input field")
+        messagebox.showerror(title="Empty box Error",
+                             message="Fill all Text fields")
 
         # calling the clearAll function
         clearAll()
 
         return -1
+    # if:
+    #     if d.isalpha():
+    #         # show the error message
+    #         messagebox.showerror(title="Empty box Error",
+    #                          message="Fill all Text fields")
+
+    #         # calling the clearAll function
+    #         clearAll()
+
+    #         return -1
+
+
+# function to calculate age
+def resultant():
+    # check for error
+    value = checkError()
+
+    # if error is occur then return
+    if value == -1:
+        return
+
+    else:
+        # get the value from the respective entry boxes
+        birth_day = int(day_entry.get())
+        birth_month = int(month_entry.get())
+        birth_year = int(year_entry.get())
+
+        given_day = int(given_day_entry.get())
+        given_month = int(given_month_entry.get())
+        given_year = int(given_year_entry.get())
+
+        # convert the accessed birth data and given data in date format using date function of datetime module
+        date_of_birth = date(birth_year, birth_month, birth_day)
+        given_date = date(given_year, given_month, given_day)
+
+        # calculate the difference between two dates using relativedata function
+        result = relativedelta(given_date, date_of_birth)
+
+        # get the value of date, month and year from calculated result
+        year_from_result = result.years
+        month_from_result = result.months
+        day_from_result = result.days
+
+        # send the result data into respective result label
+        years_value.config(text=year_from_result)
+        months_value.config(text=month_from_result)
+        days_value.config(text=day_from_result)
 
 
 # Heading Age calculator

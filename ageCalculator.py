@@ -57,16 +57,24 @@ day = Label(root, text="Year:", bg='#4a4e69', fg='black',
 day.place(x=40, y=270)
 
 # Date of birth Entry Field
-day_field = Entry(root, font=('arial', 15))
-day_field.place(x=120, y=210, height=25, width=120)
+given_day_entry = Entry(root, font=('arial', 15))
+given_day_entry.place(x=120, y=210, height=25, width=120)
 
-month_field = Entry(root, font=('arial', 15))
-month_field.place(x=120, y=240, height=25, width=120)
+given_month_entry = Entry(root, font=('arial', 15))
+given_month_entry.place(x=120, y=240, height=25, width=120)
 
-year_field = Entry(root, font=('arial', 15))
-year_field.place(x=120, y=270, height=25, width=120)
+given_year_entry = Entry(root, font=('arial', 15))
+given_year_entry.place(x=120, y=270, height=25, width=120)
 
-# Given date Entry Field
+# Given date entry field
+given_day_entry = Entry(root, font=('arial', 15))
+given_day_entry.place(x=540, y=210, height=25, width=120)
+
+given_month_entry = Entry(root, font=('arial', 15))
+given_month_entry.place(x=540, y=240, height=25, width=120)
+
+given_year_entry = Entry(root, font=('arial', 15))
+given_year_entry.place(x=540, y=270, height=25, width=120)
 
 
 # start the GUI

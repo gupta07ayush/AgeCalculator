@@ -92,10 +92,15 @@ given_month_entry.place(x=540, y=240, height=25, width=120)
 given_year_entry = Entry(root, font=('arial', 15))
 given_year_entry.place(x=540, y=270, height=25, width=120)
 
-# frame2 which contains all user entry boxes
+# frame2 which contains results
 frame2 = Label(root, font=(
     'Times new roman', 50, 'bold'), bg="#4a4e69")
 frame2.place(x=20, y=350, width=660, height=170)
+
+# Resultant age heading
+resultant_age = Label(root, text="Resultant Age",
+                      font=('arial', 15, 'bold'), bg='#22223b', fg='white')
+resultant_age.place(x=30, y=360, width=640)
 
 
 # start the GUI

@@ -1,8 +1,11 @@
 # Import some functions from tkinter module
-from tkinter import Entry, Button, Tk, Label
+from tkinter import Entry, Button, Tk, Label, END
 
 # import messagebox  class from tkinter
 from tkinter import messagebox
+
+# import datetime module
+from datetime import datetime
 
 # create a object of TK class to create a GUI window
 root = Tk()
@@ -15,6 +18,19 @@ root.geometry("700x600")
 
 # set the background color of whole GUI window root
 root.config(bg="#344e41")
+
+
+def today():
+    # When today button is pressed this button will fill presend date in the field.
+    present = datetime.now()
+    day = present.strftime('%d')
+    month = present.strftime("%m")
+    year = present.strftime("%Y")
+    print(day, month, year)
+    given_day_entry.insert(END, day)
+    given_month_entry.insert(END, month)
+    given_year_entry.insert(END, year)
+
 
 # Heading Age calculator
 heading = Label(root, text='Age Calculator', font=(
@@ -38,7 +54,7 @@ given_date.place(x=400, y=170, width=160, height=30)
 
 # button to display today's date
 today = Button(root, text="Today", bg='#283618', fg='#f1faee',
-               font=('Helvetica', 14), border=3, relief='raised')
+               font=('Helvetica', 14), border=4, relief='raised', command=today)
 today.place(x=570, y=170, width=90, height=30)
 
 # day label
@@ -57,7 +73,7 @@ year = Label(root, text="Year:", bg='#4a4e69', fg='black',
 year.place(x=40, y=270)
 
 # Date of birth Entry Field
-given_day_entry = Entry(root, font=('arial', 15))
+given_day_entry = Entry(root, text="", font=('arial', 15))
 given_day_entry.place(x=120, y=210, height=25, width=120)
 
 given_month_entry = Entry(root, font=('arial', 15))
@@ -97,10 +113,10 @@ frame2 = Label(root, font=(
     'Times new roman', 50, 'bold'), bg="#4a4e69")
 frame2.place(x=20, y=350, width=660, height=170)
 
-# Resultant age heading
-resultant_age = Label(root, text="Resultant Age",
-                      font=('arial', 15, 'bold'), bg='#22223b', fg='white')
-resultant_age.place(x=30, y=360, width=640)
+# Resultant age button
+resultant_age = Button(root, text="Resultant Age",
+                       font=('arial', 15, 'bold'), bg='#22223b', fg='white')
+resultant_age.place(x=40, y=360, width=620)
 
 
 # start the GUI

@@ -23,7 +23,7 @@ heading.place(x=20, y=20, width=660, height=100)
 
 # frame which contains all user entry boxes
 frame = Label(root, font=(
-    'Times new roman', 50, 'bold'), bg="#005f73")
+    'Times new roman', 50, 'bold'), bg="#4a4e69")
 frame.place(x=20, y=150, width=660, height=200)
 
 # Date of birth heading label
@@ -40,6 +40,12 @@ dob.place(x=400, y=170, width=160, height=30)
 today = Button(root, text="Today", bg='#283618', fg='#f1faee',
                font=('Helvetica', 14), border=3, relief='raised')
 today.place(x=570, y=170, width=90, height=30)
+
+# day label
+day = Label(root, text="Day", bg='#4a4e69', fg='black',
+            font=('lucida ', 15))
+day.place(x=40, y=210, width=50, height=30)
+
 
 # start the GUI
 root.mainloop()

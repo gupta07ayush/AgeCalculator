@@ -26,10 +26,27 @@ def today():
     day = present.strftime('%d')
     month = present.strftime("%m")
     year = present.strftime("%Y")
-    print(day, month, year)
+
+    # sending the present day values into given entry field
     given_day_entry.insert(END, day)
     given_month_entry.insert(END, month)
     given_year_entry.insert(END, year)
+
+
+def resultant():
+    pass
+
+
+def clearAll():
+    # delete the value of date of birth entry
+    day_entry.delete(0, END)
+    month_entry.delete(0, END)
+    year_entry.delete(0, END)
+
+    # delete the value of given entry
+    given_day_entry.delete(0, END)
+    given_month_entry.delete(0, END)
+    given_year_entry.delete(0, END)
 
 
 # Heading Age calculator
@@ -73,14 +90,14 @@ year = Label(root, text="Year:", bg='#4a4e69', fg='black',
 year.place(x=40, y=270)
 
 # Date of birth Entry Field
-given_day_entry = Entry(root, text="", font=('arial', 15), bg='#ffe5d9')
-given_day_entry.place(x=120, y=210, height=25, width=120)
+day_entry = Entry(root, text="", font=('arial', 15), bg='#ffe5d9')
+day_entry.place(x=120, y=210, height=25, width=120)
 
-given_month_entry = Entry(root, font=('arial', 15), bg='#ffe5d9')
-given_month_entry.place(x=120, y=240, height=25, width=120)
+month_entry = Entry(root, font=('arial', 15), bg='#ffe5d9')
+month_entry.place(x=120, y=240, height=25, width=120)
 
-given_year_entry = Entry(root, font=('arial', 15), bg='#ffe5d9')
-given_year_entry.place(x=120, y=270, height=25, width=120)
+year_entry = Entry(root, font=('arial', 15), bg='#ffe5d9')
+year_entry.place(x=120, y=270, height=25, width=120)
 
 
 # Given date Label
@@ -114,12 +131,12 @@ frame2 = Label(root, font=(
 frame2.place(x=20, y=350, width=660, height=190)
 
 # Resultant age button
-resultant_age = Button(root, text="Resultant Age",
+resultant_age = Button(root, text="Resultant Age", command=resultant,
                        font=('arial', 15, 'bold'), bg='#22223b', fg='white')
 resultant_age.place(x=40, y=360, width=495)
 
 # Clear All Button
-clear_all = Button(root, text="Clear All",
+clear_all = Button(root, text="Clear All", command=clearAll,
                    font=('arial', 17, 'bold'), bg='#22223b', fg='red')
 clear_all.place(x=545, y=360, width=115, height=40)
 

@@ -11,7 +11,7 @@ root = Tk()
 root.title('Age Calculator')
 
 # set the size of root window
-root.geometry("700x400")
+root.geometry("700x600")
 
 # set the background color of whole GUI window root
 root.config(bg="#344e41")
@@ -21,10 +21,10 @@ heading = Label(root, text='Age Calculator', font=(
     'Times new roman', 50, 'bold'), bg="#3a5a40")
 heading.place(x=20, y=20, width=660, height=100)
 
-# frame which contains all user entry boxes
-frame = Label(root, font=(
+# frame1 which contains all user entry boxes
+frame1 = Label(root, font=(
     'Times new roman', 50, 'bold'), bg="#4a4e69")
-frame.place(x=20, y=150, width=660, height=200)
+frame1.place(x=20, y=150, width=660, height=170)
 
 # Date of birth heading label
 dob = Label(root, text="Date of Birth", bg='#283618', fg='white',
@@ -67,7 +67,19 @@ given_year_entry = Entry(root, font=('arial', 15))
 given_year_entry.place(x=120, y=270, height=25, width=120)
 
 
-# Given date label
+# Given date Label
+given_day = Label(root, text="Given Day:", bg='#4a4e69', fg='black',
+                  font=('lucida ', 15))
+given_day.place(x=400, y=210, )
+
+given_month = Label(root, text="Given Month:", bg='#4a4e69', fg='black',
+                    font=('lucida ', 15))
+given_month.place(x=400, y=240, )
+
+# Year label
+given_year = Label(root, text="Given Year:", bg='#4a4e69', fg='black',
+                   font=('lucida ', 15))
+given_year.place(x=400, y=270)
 
 
 # Given date entry field
@@ -79,6 +91,11 @@ given_month_entry.place(x=540, y=240, height=25, width=120)
 
 given_year_entry = Entry(root, font=('arial', 15))
 given_year_entry.place(x=540, y=270, height=25, width=120)
+
+# frame2 which contains all user entry boxes
+frame2 = Label(root, font=(
+    'Times new roman', 50, 'bold'), bg="#4a4e69")
+frame2.place(x=20, y=350, width=660, height=170)
 
 
 # start the GUI

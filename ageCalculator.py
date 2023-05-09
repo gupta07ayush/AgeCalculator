@@ -31,6 +31,15 @@ dob = Label(root, text="Date of Birth", bg='#283618', fg='white',
             font=('Helvetica', 15, 'bold'))
 dob.place(x=40, y=170, width=200, height=30)
 
+# given date heading label
+dob = Label(root, text="Given Date", bg='#283618', fg='white',
+            font=('Helvetica', 15, 'bold'))
+dob.place(x=400, y=170, width=160, height=30)
+
+# button to display today's date
+today = Button(root, text="Today", bg='#283618', fg='#f1faee',
+               font=('Helvetica', 14), border=3, relief='raised')
+today.place(x=570, y=170, width=90, height=30)
 
 # start the GUI
 root.mainloop()

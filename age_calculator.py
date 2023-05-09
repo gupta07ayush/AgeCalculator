@@ -34,8 +34,8 @@ def today():
     given_year_entry.insert(END, year)
 
 
-# Function for clearing the contents of all text entry boxes
 def clearAll():
+    # Function for clearing the contents of all text entry boxes
     # delete the value of date of birth entry
     day_entry.delete(0, END)
     month_entry.delete(0, END)
@@ -56,12 +56,16 @@ def clearAll():
 def checkError():
     # if any of the entry field is empty then
     # show an error message and clear all the entries
+
+    # get the all data inside variables
     d = day_entry.get()
     m = month_entry.get()
     y = year_entry.get()
     gd = given_day_entry.get()
     gm = given_month_entry.get()
     gy = given_year_entry.get()
+
+    # if any of the entry field is empty then
     if (d == '' or m == '' or y == ''
             or gd == '' or gm == '' or gy == ''):
 
@@ -73,16 +77,15 @@ def checkError():
         clearAll()
 
         return -1
-    # if:
-    #     if d.isalpha():
-    #         # show the error message
-    #         messagebox.showerror(title="Empty box Error",
-    #                          message="Fill all Text fields")
+    elif d.isalpha():
+        # show the error message
+        messagebox.showerror(title="Empty box Error",
+                             message="Fill all Text fields")
 
-    #         # calling the clearAll function
-    #         clearAll()
+        # calling the clearAll function
+        clearAll()
 
-    #         return -1
+        return -1
 
 
 # function to calculate age

@@ -44,8 +44,17 @@ today.place(x=570, y=170, width=90, height=30)
 # day label
 day = Label(root, text="Day", bg='#4a4e69', fg='black',
             font=('lucida ', 15))
-day.place(x=40, y=210, width=50, height=30)
+day.place(x=40, y=210, )
 
+# month label
+day = Label(root, text="Month", bg='#4a4e69', fg='black',
+            font=('lucida ', 15))
+day.place(x=40, y=240, )
+
+# Year label
+day = Label(root, text="Year", bg='#4a4e69', fg='black',
+            font=('lucida ', 15))
+day.place(x=40, y=270)
 
 # start the GUI
 root.mainloop()

@@ -73,13 +73,13 @@ year = Label(root, text="Year:", bg='#4a4e69', fg='black',
 year.place(x=40, y=270)
 
 # Date of birth Entry Field
-given_day_entry = Entry(root, text="", font=('arial', 15))
+given_day_entry = Entry(root, text="", font=('arial', 15), bg='#ffe5d9')
 given_day_entry.place(x=120, y=210, height=25, width=120)
 
-given_month_entry = Entry(root, font=('arial', 15))
+given_month_entry = Entry(root, font=('arial', 15), bg='#ffe5d9')
 given_month_entry.place(x=120, y=240, height=25, width=120)
 
-given_year_entry = Entry(root, font=('arial', 15))
+given_year_entry = Entry(root, font=('arial', 15), bg='#ffe5d9')
 given_year_entry.place(x=120, y=270, height=25, width=120)
 
 
@@ -99,13 +99,13 @@ given_year.place(x=400, y=270)
 
 
 # Given date entry field
-given_day_entry = Entry(root, font=('arial', 15))
+given_day_entry = Entry(root, font=('arial', 15), bg='#ffe5d9')
 given_day_entry.place(x=540, y=210, height=25, width=120)
 
-given_month_entry = Entry(root, font=('arial', 15))
+given_month_entry = Entry(root, font=('arial', 15), bg='#ffe5d9')
 given_month_entry.place(x=540, y=240, height=25, width=120)
 
-given_year_entry = Entry(root, font=('arial', 15))
+given_year_entry = Entry(root, font=('arial', 15), bg='#ffe5d9')
 given_year_entry.place(x=540, y=270, height=25, width=120)
 
 # frame2 which contains results
@@ -116,7 +116,12 @@ frame2.place(x=20, y=350, width=660, height=190)
 # Resultant age button
 resultant_age = Button(root, text="Resultant Age",
                        font=('arial', 15, 'bold'), bg='#22223b', fg='white')
-resultant_age.place(x=40, y=360, width=620)
+resultant_age.place(x=40, y=360, width=495)
+
+# Clear All Button
+clear_all = Button(root, text="Clear All",
+                   font=('arial', 17, 'bold'), bg='#22223b', fg='red')
+clear_all.place(x=545, y=360, width=115, height=40)
 
 # Result Labels of years, months and days
 years = Label(root, text="Years", bg='#0c1821', fg='white',

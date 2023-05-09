@@ -47,14 +47,14 @@ day = Label(root, text="Day:", bg='#4a4e69', fg='black',
 day.place(x=40, y=210, )
 
 # month label
-day = Label(root, text="Month:", bg='#4a4e69', fg='black',
-            font=('lucida ', 15))
-day.place(x=40, y=240, )
+month = Label(root, text="Month:", bg='#4a4e69', fg='black',
+              font=('lucida ', 15))
+month.place(x=40, y=240, )
 
 # Year label
-day = Label(root, text="Year:", bg='#4a4e69', fg='black',
-            font=('lucida ', 15))
-day.place(x=40, y=270)
+year = Label(root, text="Year:", bg='#4a4e69', fg='black',
+             font=('lucida ', 15))
+year.place(x=40, y=270)
 
 # Date of birth Entry Field
 given_day_entry = Entry(root, font=('arial', 15))
@@ -65,6 +65,10 @@ given_month_entry.place(x=120, y=240, height=25, width=120)
 
 given_year_entry = Entry(root, font=('arial', 15))
 given_year_entry.place(x=120, y=270, height=25, width=120)
+
+
+# Given date label
+
 
 # Given date entry field
 given_day_entry = Entry(root, font=('arial', 15))

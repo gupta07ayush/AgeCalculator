@@ -128,7 +128,7 @@ def resultant():
 # Heading Age calculator
 heading = Label(root, text='Age Calculator', font=(
     'Times new roman', 50, 'bold'), bg="#3a5a40")
-heading.place(x=20, y=20, width=660, height=100)
+heading.place(x=20, y=20, width=660, height=110)
 
 # frame1 which contains all user entry boxes
 frame1 = Label(root, font=(
@@ -204,7 +204,7 @@ given_year_entry.place(x=540, y=270, height=25, width=120)
 # frame2 which contains results
 frame2 = Label(root, font=(
     'Times new roman', 50, 'bold'), bg="#4a4e69")
-frame2.place(x=20, y=350, width=660, height=190)
+frame2.place(x=20, y=340, width=660, height=200)
 
 # Resultant age button
 resultant_age = Button(root, text="Resultant Age", command=resultant,
@@ -244,9 +244,30 @@ days_value.place(x=400, y=470, width=80, height=35)
 
 
 # friends date of birth
-aman = Button(root, text='Aman', bg='#023047', fg='white', command='#')
-aman.place(x=40, y=560, width=60, height=30)
+aman = Button(root, text='Aman', bg='#03071e', fg='white', command='#')
+aman.place(x=40, y=560, width=70, height=30)
 
+ananya = Button(root, text='Ananya', bg='#03071e', fg='white', command='#')
+ananya.place(x=120, y=560, width=70, height=30)
+
+ashish = Button(root, text='Ashish', bg='#03071e', fg='white', command='#')
+ashish.place(x=200, y=560, width=70, height=30)
+
+ayush = Button(root, text='Ayush', bg='#03071e', fg='white', command='#')
+ayush.place(x=280, y=560, width=70, height=30)
+
+prashant = Button(root, text='Prashant', bg='#03071e', fg='white', command='#')
+prashant.place(x=360, y=560, width=70, height=30)
+
+priyanshi = Button(root, text='Priyanshi', bg='#03071e',
+                   fg='white', command='#')
+priyanshi.place(x=440, y=560, width=70, height=30)
+
+silver = Button(root, text='Silver', bg='#03071e', fg='white', command='#')
+silver.place(x=520, y=560, width=70, height=30)
+
+divya = Button(root, text='Divya', bg='#03071e', fg='white', command='#')
+divya.place(x=600, y=560, width=70, height=30)
 
 # start the GUI
 root.mainloop()

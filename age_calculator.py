@@ -249,11 +249,17 @@ def aman():
     day_entry.insert(0, "05")
 
 
+def ananya():
+    year_entry.insert(0, "1997")
+    month_entry.insert(0, "01")
+    day_entry.insert(0, "09")
+
+
 # friends date of birth
 aman = Button(root, text='Aman', bg='#03071e', fg='white', command=aman)
 aman.place(x=40, y=560, width=70, height=30)
 
-ananya = Button(root, text='Ananya', bg='#03071e', fg='white', command='#')
+ananya = Button(root, text='Ananya', bg='#03071e', fg='white', command=ananya)
 ananya.place(x=120, y=560, width=70, height=30)
 
 ashish = Button(root, text='Ashish', bg='#03071e', fg='white', command='#')

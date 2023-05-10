@@ -15,7 +15,7 @@ root = Tk()
 root.title('Age Calculator')
 
 # set the size of root window
-root.geometry("700x600")
+root.geometry("700x610")
 
 # set the background color of whole GUI window root
 root.config(bg="#344e41")
@@ -242,6 +242,8 @@ days_value = Label(root, text="", bg='#4a4e69', fg='white',
                    font=('Helvetica', 35, 'bold'))
 days_value.place(x=400, y=470, width=80, height=35)
 
+# functions for friends button
+
 
 def aman():
     year_entry.insert(0, "1996")
@@ -279,6 +281,18 @@ def priyanshi():
     day_entry.insert(0, "14")
 
 
+def silver():
+    year_entry.insert(0, "1997")
+    month_entry.insert(0, "08")
+    day_entry.insert(0, "09")
+
+
+def divya():
+    year_entry.insert(0, "1996")
+    month_entry.insert(0, "02")
+    day_entry.insert(0, "13")
+
+
 # friends date of birth
 aman = Button(root, text='Aman', bg='#03071e', fg='white', command=aman)
 aman.place(x=40, y=560, width=70, height=30)
@@ -300,11 +314,11 @@ priyanshi = Button(root, text='Priyanshi', bg='#03071e',
                    fg='white', command=priyanshi)
 priyanshi.place(x=440, y=560, width=70, height=30)
 
-silver = Button(root, text='Silver', bg='#03071e', fg='white', command='#')
+silver = Button(root, text='Silver', bg='#03071e', fg='white', command=silver)
 silver.place(x=520, y=560, width=70, height=30)
 
-divya = Button(root, text='Divya', bg='#03071e', fg='white', command='#')
-divya.place(x=600, y=560, width=70, height=30)
+divya = Button(root, text='Divya', bg='#03071e', fg='white', command=divya)
+divya.place(x=600, y=560, width=60, height=30)
 
 # start the GUI
 root.mainloop()

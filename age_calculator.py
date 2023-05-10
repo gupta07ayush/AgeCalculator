@@ -255,6 +255,12 @@ def ananya():
     day_entry.insert(0, "09")
 
 
+def ashish():
+    year_entry.insert(0, "1997")
+    month_entry.insert(0, "11")
+    day_entry.insert(0, "18")
+
+
 # friends date of birth
 aman = Button(root, text='Aman', bg='#03071e', fg='white', command=aman)
 aman.place(x=40, y=560, width=70, height=30)
@@ -262,7 +268,7 @@ aman.place(x=40, y=560, width=70, height=30)
 ananya = Button(root, text='Ananya', bg='#03071e', fg='white', command=ananya)
 ananya.place(x=120, y=560, width=70, height=30)
 
-ashish = Button(root, text='Ashish', bg='#03071e', fg='white', command='#')
+ashish = Button(root, text='Ashish', bg='#03071e', fg='white', command=ashish)
 ashish.place(x=200, y=560, width=70, height=30)
 
 ayush = Button(root, text='Ayush', bg='#03071e', fg='white', command='#')

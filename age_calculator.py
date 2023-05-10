@@ -15,7 +15,7 @@ root = Tk()
 root.title('Age Calculator')
 
 # set the size of root window
-root.geometry("700x580")
+root.geometry("700x600")
 
 # set the background color of whole GUI window root
 root.config(bg="#344e41")
@@ -241,6 +241,11 @@ months_value.place(x=300, y=470, width=80, height=35)
 days_value = Label(root, text="", bg='#4a4e69', fg='white',
                    font=('Helvetica', 35, 'bold'))
 days_value.place(x=400, y=470, width=80, height=35)
+
+
+# friends date of birth
+aman = Button(root, text='Aman', bg='#023047', fg='white', command='#')
+aman.place(x=40, y=560, width=60, height=30)
 
 
 # start the GUI

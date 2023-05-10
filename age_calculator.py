@@ -273,6 +273,12 @@ def prashant():
     day_entry.insert(0, "02")
 
 
+def priyanshi():
+    year_entry.insert(0, "1997")
+    month_entry.insert(0, "12")
+    day_entry.insert(0, "14")
+
+
 # friends date of birth
 aman = Button(root, text='Aman', bg='#03071e', fg='white', command=aman)
 aman.place(x=40, y=560, width=70, height=30)
@@ -291,7 +297,7 @@ prashant = Button(root, text='Prashant', bg='#03071e',
 prashant.place(x=360, y=560, width=70, height=30)
 
 priyanshi = Button(root, text='Priyanshi', bg='#03071e',
-                   fg='white', command='#')
+                   fg='white', command=priyanshi)
 priyanshi.place(x=440, y=560, width=70, height=30)
 
 silver = Button(root, text='Silver', bg='#03071e', fg='white', command='#')

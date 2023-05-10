@@ -243,8 +243,14 @@ days_value = Label(root, text="", bg='#4a4e69', fg='white',
 days_value.place(x=400, y=470, width=80, height=35)
 
 
+def aman():
+    year_entry.insert(0, "1996")
+    month_entry.insert(0, "08")
+    day_entry.insert(0, "05")
+
+
 # friends date of birth
-aman = Button(root, text='Aman', bg='#03071e', fg='white', command='#')
+aman = Button(root, text='Aman', bg='#03071e', fg='white', command=aman)
 aman.place(x=40, y=560, width=70, height=30)
 
 ananya = Button(root, text='Ananya', bg='#03071e', fg='white', command='#')

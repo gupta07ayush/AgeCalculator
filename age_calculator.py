@@ -344,5 +344,5 @@ silver.place(x=520, y=560, width=70, height=30)
 divya = Button(root, text='Divya', bg='#03071e', fg='white', command=divya)
 divya.place(x=600, y=560, width=60, height=30)
 
-# start the GUI app
+# start the GUI app of tkinter
 root.mainloop()

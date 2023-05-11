@@ -146,9 +146,9 @@ given_date = Label(root, text="Given Date", bg='#283618', fg='white',
 given_date.place(x=400, y=170, width=160, height=30)
 
 # button to display today's date
-today = Button(root, text="Today", bg='#283618', fg='#f1faee',
-               font=('Helvetica', 14), border=4, relief='raised', command=today)
-today.place(x=570, y=170, width=90, height=30)
+today_button = Button(root, text="Today", bg='#283618', fg='#f1faee',
+                      font=('Helvetica', 14), border=4, relief='raised', command=today)
+today_button.place(x=570, y=170, width=90, height=30)
 
 # day label
 day = Label(root, text="Day:", bg='#4a4e69', fg='black',
@@ -246,56 +246,80 @@ days_value.place(x=400, y=470, width=80, height=35)
 
 
 def aman():
+    clearAll()
     year_entry.insert(0, "1996")
     month_entry.insert(0, "08")
     day_entry.insert(0, "05")
+    today()
+    resultant()
 
 
 def ananya():
+    clearAll()
     year_entry.insert(0, "1997")
     month_entry.insert(0, "01")
     day_entry.insert(0, "09")
+    today()
+    resultant()
 
 
 def ashish():
+    clearAll()
     year_entry.insert(0, "1997")
     month_entry.insert(0, "11")
     day_entry.insert(0, "18")
+    today()
+    resultant()
 
 
 def ayush():
+    clearAll()
     year_entry.insert(0, "1996")
     month_entry.insert(0, "06")
     day_entry.insert(0, "16")
+    today()
+    resultant()
 
 
 def prashant():
+    clearAll()
     year_entry.insert(0, "1997")
     month_entry.insert(0, "03")
     day_entry.insert(0, "02")
+    today()
+    resultant()
 
 
 def priyanshi():
+    clearAll()
     year_entry.insert(0, "1997")
     month_entry.insert(0, "12")
     day_entry.insert(0, "14")
+    today()
+    resultant()
 
 
 def silver():
+    clearAll()
     year_entry.insert(0, "1997")
     month_entry.insert(0, "08")
     day_entry.insert(0, "09")
+    today()
+    resultant()
 
 
 def divya():
+    clearAll()
     year_entry.insert(0, "1996")
     month_entry.insert(0, "02")
     day_entry.insert(0, "13")
+    today()
+    resultant()
 
 
 # friends date of birth
 aman = Button(root, text='Aman', bg='#03071e', fg='white', command=aman)
-aman.place(x=40, y=560, width=70, height=30)
+aman.place(x=35, y=560, width=75, height=30)
 
 ananya = Button(root, text='Ananya', bg='#03071e', fg='white', command=ananya)
 ananya.place(x=120, y=560, width=70, height=30)
@@ -320,5 +344,5 @@ silver.place(x=520, y=560, width=70, height=30)
 divya = Button(root, text='Divya', bg='#03071e', fg='white', command=divya)
 divya.place(x=600, y=560, width=60, height=30)
 
-# start the GUI
+# start the GUI app
 root.mainloop()
